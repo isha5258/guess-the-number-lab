@@ -28,15 +28,16 @@ const game = {
     },
 
   render: function(){
-    console.log(this.prevGuesses)
+    let msg = null
     if (this.prevGuesses[this.prevGuesses.length - 1] === this.secretNum){
-    console.log(`Congrat! You guessed the number in ${this.prevGuesses[this.prevGuesses.length - 1]} tries!`)
+    msg = `Congrat! You guessed the number in ${this.prevGuesses.length} tries!`
   } else if (this.prevGuesses[this.prevGuesses.length - 1] > this.secretNum){
     
-    console.log(`Your guess is too high. Previous guesses: ${this.prevGuesses.join(', ')}`)
+    msg = `Your guess is too high. Previous guesses: ${this.prevGuesses.join(', ')}`
   } else {
-    console.log(`Your guess is too low. Previous guesses: ${this.prevGuesses.join(', ')}`)
+    msg = `Your guess is too low. Previous guesses: ${this.prevGuesses.join(', ')}`
   }
+  alert(msg)
 }
 }
 game.play()
