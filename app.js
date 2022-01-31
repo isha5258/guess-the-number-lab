@@ -2,8 +2,8 @@
 
 const game = {
   title: 'Guess the Number!',
-  biggestNum: 10,
-  smallestNum: 0,
+  biggestNum: 100,
+  smallestNum: 1,
   secretNum: null,
   prevGuesses: [],
   
@@ -36,7 +36,7 @@ const game = {
     console.log(`Your guess is too high. Previous guesses: ${this.prevGuesses.join(', ')}`)
   } else {
     console.log(`Your guess is too low. Previous guesses: ${this.prevGuesses.join(', ')}`)
-}
+  }
 }
 }
 game.play()
